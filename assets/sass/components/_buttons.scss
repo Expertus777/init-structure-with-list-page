@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  height: em-calc(40px);
+  line-height: em-calc(40px);
+  background: $transparent;
+  border-radius: em-calc(20px);
+  color: $white;
+  text-decoration: none;
+  padding: em-calc(0 20px);
+  transition: opacity 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: rem-calc(18px);
+  &:hover {
+    opacity: 0.8;
+  }
+}

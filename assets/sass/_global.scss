@@ -1,0 +1,56 @@
+html, body {
+  min-height: 100%;
+  font-family: 'Open Sans', arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: $black;
+  background: $white;
+  position: relative;
+}
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+.align-p-1{
+  text-align: left;
+}
+.align-p-2{
+  text-align: center;
+}
+.align-p-3{
+  text-align: right;
+}
+
+strong, .strong{
+  font-weight: bold;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.hide{
+  display: none;
+}
+
+/*START DISPLAY TABLE AND TABLE-CELL*/
+.table{
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+/*END DISPLAY TABLE AND TABLE-CELL*/

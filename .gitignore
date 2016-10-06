@@ -1,0 +1,8 @@
+node_modules
+dist
+.tmp
+.sass-cache
+.idea
+/assets/stylesheets
+bower_components
+*.map

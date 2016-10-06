@@ -1,0 +1,120 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+$enable-flex: false;
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include make-container();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+  .row{
+    @include make-row();
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+@if $enable-grid-classes {
+  $gutter-p-1: 14px;
+  $gutter-p-2: 30px;
+
+  .container-p-1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:  ($gutter-p-1 / 2);
+    padding-right: ($gutter-p-1 / 2);
+    @include make-container-max-widths();
+  }
+
+  .row-p-1 {
+    margin-left:  ($gutter-p-1 / -2);
+    margin-right: ($gutter-p-1 / -2);
+    @extend .group;
+  }
+
+  .row-p-1 > .col-xs-1, .row-p-1 > .col-xs-2, .row-p-1 > .col-xs-3, .row-p-1 > .col-xs-4, .row-p-1 > .col-xs-5, .row-p-1 > .col-xs-6, .row-p-1 > .col-xs-7, .row-p-1 > .col-xs-8, .row-p-1 > .col-xs-9, .row-p-1 > .col-xs-10, .row-p-1 > .col-xs-11, .row-p-1 > .col-xs-12, .row-p-1 > .col-sm-1, .row-p-1 > .col-sm-2, .row-p-1 > .col-sm-3, .row-p-1 > .col-sm-4, .row-p-1 > .col-sm-5, .row-p-1 > .col-sm-6, .row-p-1 > .col-sm-7, .row-p-1 > .col-sm-8, .row-p-1 > .col-sm-9, .row-p-1 > .col-sm-10, .row-p-1 > .col-sm-11, .row-p-1 > .col-sm-12, .row-p-1 > .col-md-1, .row-p-1 > .col-md-2, .row-p-1 > .col-md-3, .row-p-1 > .col-md-4, .row-p-1 > .col-md-5, .row-p-1 > .col-md-6, .row-p-1 > .col-md-7, .row-p-1 > .col-md-8, .row-p-1 > .col-md-9, .row-p-1 > .col-md-10, .row-p-1 > .col-md-11, .row-p-1 > .col-md-12, .row-p-1 > .col-lg-1, .row-p-1 > .col-lg-2, .row-p-1 > .col-lg-3, .row-p-1 > .col-lg-4, .row-p-1 > .col-lg-5, .row-p-1 > .col-lg-6, .row-p-1 > .col-lg-7, .row-p-1 > .col-lg-8, .row-p-1 > .col-lg-9, .row-p-1 > .col-lg-10, .row-p-1 > .col-lg-11, .row-p-1 > .col-lg-12, .row-p-1 > .col-xl-1, .row-p-1 > .col-xl-2, .row-p-1 > .col-xl-3, .row-p-1 > .col-xl-4, .row-p-1 > .col-xl-5, .row-p-1 > .col-xl-6, .row-p-1 > .col-xl-7, .row-p-1 > .col-xl-8, .row-p-1 > .col-xl-9, .row-p-1 > .col-xl-10, .row-p-1 > .col-xl-11, .row-p-1 > .col-xl-12, .row-p-1 > .col-xs-1, .row-p-1 > .col-xs-2, .row-p-1 > .col-xs-3, .row-p-1 > .col-xs-4, .row-p-1 > .col-xs-5, .row-p-1 > .col-xs-6, .row-p-1 > .col-xs-7, .row-p-1 > .col-xs-8, .row-p-1 > .col-xs-9, .row-p-1 > .col-xs-10, .row-p-1 > .col-xs-11, .row-p-1 > .col-xs-12, .row-p-1 > .col-sm-1, .row-p-1 > .col-sm-2, .row-p-1 > .col-sm-3, .row-p-1 > .col-sm-4, .row-p-1 > .col-sm-5, .row-p-1 > .col-sm-6, .row-p-1 > .col-sm-7, .row-p-1 > .col-sm-8, .row-p-1 > .col-sm-9, .row-p-1 > .col-sm-10, .row-p-1 > .col-sm-11, .row-p-1 > .col-sm-12, .row-p-1 > .col-md-1, .row-p-1 > .col-md-2, .row-p-1 > .col-md-3, .row-p-1 > .col-md-4, .row-p-1 > .col-md-5, .row-p-1 > .col-md-6, .row-p-1 > .col-md-7, .row-p-1 > .col-md-8, .row-p-1 > .col-md-9, .row-p-1 > .col-md-10, .row-p-1 > .col-md-11, .row-p-1 > .col-md-12, .row-p-1 > .col-lg-1, .row-p-1 > .col-lg-2, .row-p-1 > .col-lg-3, .row-p-1 > .col-lg-4, .row-p-1 > .col-lg-5, .row-p-1 > .col-lg-6, .row-p-1 > .col-lg-7, .row-p-1 > .col-lg-8, .row-p-1 > .col-lg-9, .row-p-1 > .col-lg-10, .row-p-1 > .col-lg-11, .row-p-1 > .col-lg-12, .row-p-1 > .col-xl-1, .row-p-1 > .col-xl-2, .row-p-1 > .col-xl-3, .row-p-1 > .col-xl-4, .row-p-1 > .col-xl-5, .row-p-1 > .col-xl-6, .row-p-1 > .col-xl-7, .row-p-1 > .col-xl-8, .row-p-1 > .col-xl-9, .row-p-1 > .col-xl-10, .row-p-1 > .col-xl-11, .row-p-1 > .col-xl-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: $gutter-p-1/2;
+    padding-right: $gutter-p-1/2;
+  }
+
+  .container-p-2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:  ($gutter-p-2 / 2);
+    padding-right: ($gutter-p-2 / 2);
+    @include make-container-max-widths();
+  }
+
+  .row-p-2 {
+    margin-left:  ($gutter-p-2 / -2);
+    margin-right: ($gutter-p-2 / -2);
+    @extend .group;
+  }
+
+  .row-p-2 > .col-xs-1, .row-p-2 > .col-xs-2, .row-p-2 > .col-xs-3, .row-p-2 > .col-xs-4, .row-p-2 > .col-xs-5, .row-p-2 > .col-xs-6, .row-p-2 > .col-xs-7, .row-p-2 > .col-xs-8, .row-p-2 > .col-xs-9, .row-p-2 > .col-xs-10, .row-p-2 > .col-xs-11, .row-p-2 > .col-xs-12, .row-p-2 > .col-sm-1, .row-p-2 > .col-sm-2, .row-p-2 > .col-sm-3, .row-p-2 > .col-sm-4, .row-p-2 > .col-sm-5, .row-p-2 > .col-sm-6, .row-p-2 > .col-sm-7, .row-p-2 > .col-sm-8, .row-p-2 > .col-sm-9, .row-p-2 > .col-sm-10, .row-p-2 > .col-sm-11, .row-p-2 > .col-sm-12, .row-p-2 > .col-md-1, .row-p-2 > .col-md-2, .row-p-2 > .col-md-3, .row-p-2 > .col-md-4, .row-p-2 > .col-md-5, .row-p-2 > .col-md-6, .row-p-2 > .col-md-7, .row-p-2 > .col-md-8, .row-p-2 > .col-md-9, .row-p-2 > .col-md-10, .row-p-2 > .col-md-11, .row-p-2 > .col-md-12, .row-p-2 > .col-lg-1, .row-p-2 > .col-lg-2, .row-p-2 > .col-lg-3, .row-p-2 > .col-lg-4, .row-p-2 > .col-lg-5, .row-p-2 > .col-lg-6, .row-p-2 > .col-lg-7, .row-p-2 > .col-lg-8, .row-p-2 > .col-lg-9, .row-p-2 > .col-lg-10, .row-p-2 > .col-lg-11, .row-p-2 > .col-lg-12, .row-p-2 > .col-xl-1, .row-p-2 > .col-xl-2, .row-p-2 > .col-xl-3, .row-p-2 > .col-xl-4, .row-p-2 > .col-xl-5, .row-p-2 > .col-xl-6, .row-p-2 > .col-xl-7, .row-p-2 > .col-xl-8, .row-p-2 > .col-xl-9, .row-p-2 > .col-xl-10, .row-p-2 > .col-xl-11, .row-p-2 > .col-xl-12, .row-p-2 > .col-xs-1, .row-p-2 > .col-xs-2, .row-p-2 > .col-xs-3, .row-p-2 > .col-xs-4, .row-p-2 > .col-xs-5, .row-p-2 > .col-xs-6, .row-p-2 > .col-xs-7, .row-p-2 > .col-xs-8, .row-p-2 > .col-xs-9, .row-p-2 > .col-xs-10, .row-p-2 > .col-xs-11, .row-p-2 > .col-xs-12, .row-p-2 > .col-sm-1, .row-p-2 > .col-sm-2, .row-p-2 > .col-sm-3, .row-p-2 > .col-sm-4, .row-p-2 > .col-sm-5, .row-p-2 > .col-sm-6, .row-p-2 > .col-sm-7, .row-p-2 > .col-sm-8, .row-p-2 > .col-sm-9, .row-p-2 > .col-sm-10, .row-p-2 > .col-sm-11, .row-p-2 > .col-sm-12, .row-p-2 > .col-md-1, .row-p-2 > .col-md-2, .row-p-2 > .col-md-3, .row-p-2 > .col-md-4, .row-p-2 > .col-md-5, .row-p-2 > .col-md-6, .row-p-2 > .col-md-7, .row-p-2 > .col-md-8, .row-p-2 > .col-md-9, .row-p-2 > .col-md-10, .row-p-2 > .col-md-11, .row-p-2 > .col-md-12, .row-p-2 > .col-lg-1, .row-p-2 > .col-lg-2, .row-p-2 > .col-lg-3, .row-p-2 > .col-lg-4, .row-p-2 > .col-lg-5, .row-p-2 > .col-lg-6, .row-p-2 > .col-lg-7, .row-p-2 > .col-lg-8, .row-p-2 > .col-lg-9, .row-p-2 > .col-lg-10, .row-p-2 > .col-lg-11, .row-p-2 > .col-lg-12, .row-p-2 > .col-xl-1, .row-p-2 > .col-xl-2, .row-p-2 > .col-xl-3, .row-p-2 > .col-xl-4, .row-p-2 > .col-xl-5, .row-p-2 > .col-xl-6, .row-p-2 > .col-xl-7, .row-p-2 > .col-xl-8, .row-p-2 > .col-xl-9, .row-p-2 > .col-xl-10, .row-p-2 > .col-xl-11, .row-p-2 > .col-xl-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: $gutter-p-2/2;
+    padding-right: $gutter-p-2/2;
+  }
+}
+
+// Flex variation
+//
+// Custom styles for additional flex alignment options.
+
+@if $enable-flex and $enable-grid-classes {
+
+  // Flex column reordering
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-first { order: -1; }
+      .col-#{$breakpoint}-last  { order: 1; }
+    }
+  }
+
+  // Alignment for every column in row
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .row-#{$breakpoint}-top    { align-items: flex-start; }
+      .row-#{$breakpoint}-center { align-items: center; }
+      .row-#{$breakpoint}-bottom { align-items: flex-end; }
+    }
+  }
+
+  // Alignment per column
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-top    { align-self: flex-start; }
+      .col-#{$breakpoint}-center { align-self: center; }
+      .col-#{$breakpoint}-bottom { align-self: flex-end; }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+h1,h2,h3,h4,h5,h6{
+  margin-bottom: rem-calc(34px);
+  font-weight: 400;
+  span{
+    color: $black;
+  }
+}
+h2{
+  color: $black;
+  font-size: rem-calc(47px);
+}
+h3{
+  font-size: rem-calc(36px);
+  color: $black;
+  line-height: 1.2;
+  >span{
+    color: $black;
+  }
+}
+h4{
+  font-size: rem-calc(27px);
+}
+
+p{
+  font-size: rem-calc(18px);
+  line-height: 1.5;
+  margin-bottom: rem-calc(30px);
+  font-weight: 300;
+  span{
+    color: $black;
+  }
+}
+a{
+  color: $black;
+  text-decoration: none;
+  span{
+    color: $black;
+  }
+}
+
+ul{
+  padding-left: rem-calc(40px);
+  position: relative;
+  margin-bottom: rem-calc(34px);
+}
+li{
+  &:before{
+    content:'\2022';
+    position: absolute;
+    left: 0;
+  }
+}
