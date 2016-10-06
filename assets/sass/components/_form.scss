@@ -7,4 +7,14 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 /*END REMOVE CLEAR BUTTON ON SEARCH FIELDS*/
 
-
+/*START FIX WEBKIT AUTOFILL*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-property: color, background-color;
+  -webkit-transition-duration: 99999s, 99999s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+  -webkit-transition-delay: 99999s, 99999s;
+}
+/*END FIX WEBKIT AUTOFILL*/

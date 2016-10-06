@@ -22,21 +22,44 @@ html, body {
   font-family: inherit;
 }
 
-.align-p-1{
+.align-p-1 {
   text-align: left;
 }
-.align-p-2{
+
+.align-p-2 {
   text-align: center;
 }
-.align-p-3{
+
+.align-p-3 {
   text-align: right;
 }
 
-strong, .strong{
-  font-weight: bold;
+.float-p-1 {
+  float: left;
 }
-.capitalize {
-  text-transform: capitalize;
+
+.float-p-2 {
+  float: none;
+}
+
+.float-p-3 {
+  float: right;
+}
+
+.v-align-1 {
+  vertical-align: bottom;
+}
+
+.v-align-2 {
+  vertical-align: middle;
+}
+
+.v-align-3{
+  vertical-align: top;
+}
+
+.hide {
+  display: none;
 }
 
 .hide{
