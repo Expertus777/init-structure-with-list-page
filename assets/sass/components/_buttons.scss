@@ -1,3 +1,8 @@
+[type="submit"],
+[type="button"]{
+  -webkit-appearance: none;
+}
+
 .btn {
   display: inline-block;
   height: em-calc(40px);
