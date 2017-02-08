@@ -1,3 +1,4 @@
+// Mixin for an element with certain aspect ratio
 @mixin aspect-ratio($width, $height) {
   position: relative;
   &:before {
@@ -6,11 +7,26 @@
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
-  >.wrapper {
+  > .wrapper {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
   }
+}
+
+// Center-align a block level element
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

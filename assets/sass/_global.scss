@@ -1,3 +1,4 @@
+// Core
 html, body {
   min-height: 100%;
   font-family: 'Open Sans', arial, sans-serif;
@@ -11,10 +12,17 @@ html, body {
 }
 
 :focus {
-  outline:none;
+  outline: none;
 }
+
 ::-moz-focus-inner {
-  border:0;
+  border: 0;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 *, *:before, *:after {
@@ -22,6 +30,8 @@ html, body {
   font-family: inherit;
 }
 
+
+// Horizontal align
 .align-p-1 {
   text-align: left;
 }
@@ -34,6 +44,8 @@ html, body {
   text-align: right;
 }
 
+
+// Floating
 .float-p-1 {
   float: left;
 }
@@ -46,6 +58,8 @@ html, body {
   float: right;
 }
 
+
+// Vertical align
 .v-align-1 {
   vertical-align: bottom;
 }
@@ -54,7 +68,7 @@ html, body {
   vertical-align: middle;
 }
 
-.v-align-3{
+.v-align-3 {
   vertical-align: top;
 }
 
@@ -62,18 +76,15 @@ html, body {
   display: none;
 }
 
-.hide{
-  display: none;
-}
 
-/*START DISPLAY TABLE AND TABLE-CELL*/
-.table{
+// Table and table cell
+.table {
   display: table;
   height: 100%;
   width: 100%;
 }
-.table-cell{
+
+.table-cell {
   display: table-cell;
   vertical-align: middle;
 }
-/*END DISPLAY TABLE AND TABLE-CELL*/

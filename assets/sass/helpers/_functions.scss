@@ -1,11 +1,5 @@
 $rem-base: 16px;
 
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -50,12 +44,4 @@ $rem-base: 16px;
     $remValues: append($remValues, convert-to-em(nth($values, $i), $base-value));
   }
   @return $remValues;
-}
-
-@mixin cell-wrapper-right {
-  padding-right: rem-calc(35px);
-}
-
-@mixin cell-wrapper-left {
-  padding-left: rem-calc(35px);
 }
