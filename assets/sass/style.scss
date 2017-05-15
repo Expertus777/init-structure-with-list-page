@@ -7,9 +7,12 @@
 @import "helpers/temporary";
 @import "global";
 
-@import "vendor/grid/grid_variables";
-@import "vendor/grid/grid_mixins";
-@import "vendor/grid/grid";
+@import "grid/group";
+@import "grid/grid-variables";
+@import "grid/grid-framework";
+@import "grid/grid-mixins";
+@import "grid/grid";
+@import "grid/breakpoints";
 
 @import "base/font-style";
 
